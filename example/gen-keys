@@ -1,0 +1,11 @@
+#!/bin/bash
+
+echo "Generating private and public keys..."
+
+# Generate an 1024-bit unencrypted private key
+openssl genrsa -out rsa.private 1024
+
+# Extract the public-key component from the private key 
+openssl rsa -in rsa.private -out rsa.public -pubout -outform PEM
+
+echo "Keys generated."
