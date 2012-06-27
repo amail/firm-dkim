@@ -196,7 +196,7 @@ stringpair **relaxed_header_canon(stringpair **headers, int headerc) {
 	int e = 0;
 	
 	/* Copy all headers */
-	stringpair **new_headers = (stringpair**)malloc(sizeof(stringpair*) * headerc + 1);   
+	stringpair **new_headers = (stringpair**)malloc(sizeof(stringpair*) * (headerc + 1));   
 	   
 	for (i = 0; i < headerc; ++i) {
 		int key_len = strlen(headers[i]->key);
